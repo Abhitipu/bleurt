@@ -108,9 +108,6 @@ def convert_by_vocab(vocab, items):
   """Converts a sequence of [tokens|ids] using the vocab."""
   output = []
   for item in items:
-    if item in ['[SEP]', '[CLS]', '[UNK]']:
-      output.append(vocab['<pad>'])
-    else:
       output.append(vocab[item])
   return output
 
